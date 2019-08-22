@@ -2,7 +2,8 @@ const path = require('path')
 
 module.exports = {
     entry: [
-        'babel-polyfill',
+        'core-js/stable',
+        'regenerator-runtime/runtime',
         './src/index.js'
     ],
     output: {
@@ -16,7 +17,7 @@ module.exports = {
             use: {
                 loader: 'babel-loader',
                 options: {
-                    presets: ['env']
+                    presets: ['@babel/preset-env']
                 }
             }
         }]
